@@ -7,10 +7,10 @@
 # First UUID is the Ivy-DTN, second UUID is the UVA-Main-DTN
 
 # Transfer based on ENV variables
-/usr/local/bin/globus transfer $ORIGIN $DESTINATION
+/usr/local/bin/globus transfer -r $ORIGIN $DESTINATION
 
 # Should create a full command like this:
-# /usr/local/bin/globus transfer aa7c63e2-c838-11ea-bef9-0e716405a293:somrc/nem2p/zeros.1G c4d80096-7612-11e7-8b5e-22000b9923ef:home/nem2p/zeros.1G
+# /usr/local/bin/globus transfer -r aa7c63e2-c838-11ea-bef9-0e716405a293:somrc/nem2p/ c4d80096-7612-11e7-8b5e-22000b9923ef:home/nem2p/
 
 # To transfer/sync an entire directory, leave off the filenames at the end of each endpoint and add the -r recursive flag:
 # /usr/local/bin/globus transfer -r aa7c63e2-c838-11ea-bef9-0e716405a293:somrc/nem2p/ c4d80096-7612-11e7-8b5e-22000b9923ef:home/nem2p/
